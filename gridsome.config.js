@@ -6,5 +6,6 @@
 
 module.exports = {
   siteName: 'たのしいWorks',
+  icon: './src/favicon.png',
   plugins: []
 }

@@ -1,8 +1,7 @@
 <template>
   <Layout>
     
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <g-image alt="logo" src="./img/logo_transparent.png" />
     
     <h1>Hello, world!</h1>
    
@@ -21,7 +20,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'たのしいWorks Portal'
   }
 }
 </script>
@@ -29,5 +28,9 @@ export default {
 <style>
 .home-links a {
   margin-right: 1rem;
+}
+
+img{
+  max-width: 760px;
 }
 </style>
