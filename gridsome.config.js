@@ -7,5 +7,14 @@
 module.exports = {
   siteName: 'たのしいWorks',
   icon: './src/favicon.png',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/pages/episodes/*.md',
+        typeName: 'Episode',
+        route: '/episode/:slug'
+      }
+    }
+  ]
 }
