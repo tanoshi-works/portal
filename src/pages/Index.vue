@@ -2,22 +2,20 @@
   <Layout>
     
     <g-image alt="logo" src="./img/logo_transparent.png" />
-     
-    <div style="text-align:center"><h1>Potal</h1></div>
-
+    <h1 class="center">Potal</h1>
     <p>
-    <div style="text-align:center">
       最近気になるIT業界の話をするPodcast、たのしいWorksのポータルサイトです。<br>
       ご意見ご感想は、Twitterで「<a href="https://twitter.com/search?q=%23たのしいWorks" target="_blank" rel="noopener">#たのしいWorks</a>」をつけて、呟いてみてください。<br>
       Podcastを続けていく上での参考にさせていただきます。ぜひお待ちしています！<br>
+    </p>
+    <div class="social-container">
+      <span class="social-twitter">
+        <a href="https://twitter.com/tanoshii_works?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tanoshii_works</a>
+      </span>
+      <span class="social-twitter">
+        <a href="https://twitter.com/intent/tweet?button_hashtag=たのしいWorks&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #たのしいWorks</a>
+      </span>
     </div>
-    </p>
-    <p class="home-links">
-     <div style="text-align:center">
-      <a href="https://twitter.com/tanoshii_works?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">Follow @tanoshii_works</a>
-      <a href="https://twitter.com/intent/tweet?button_hashtag=%E3%81%9F%E3%81%AE%E3%81%97%E3%81%84Works&ref_src=twsrc%5Etfw" target="_blank" rel="noopener">Tweet #たのしいWorks</a>
-     </div>
-    </p>
 
   </Layout>
 </template>
@@ -37,5 +35,23 @@ export default {
 
 img{
   max-width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.social-container {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.social-twitter {
+  margin: 10px;
 }
 </style>
