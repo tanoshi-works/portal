@@ -76,10 +76,3 @@ workflows:
             branches:
               only:
                 - master
-      - deploy-stg:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - dev
