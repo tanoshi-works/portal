@@ -14,7 +14,7 @@
       <div class="social-link">
         <ul>
           <li v-for="social in node.social" :key="social.title">
-            <g-link :href="social.url" target="_blank" exact>
+            <g-link :href="social.url" target="_blank" class="btn btn-success">
               <span v-html="social.title" />
             </g-link>
           </li>
@@ -63,7 +63,7 @@ export default {
 }
 
 .card-left {
-  max-width: 200px;
+  max-width: 150px;
   width: 100%;
   margin-right: 10px;
   margin-top: 20px;
@@ -71,7 +71,7 @@ export default {
 
 .card-left > img {
   display: block;
-  width: 180px;
+  width: 130px;
   margin: 10px;
 }
 
@@ -94,13 +94,6 @@ export default {
 
 .social-link > ul > li > a{
   margin: 0 5px;
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
-  border-radius: 10px;
-  color: gray;
-  background: #90ee90;
-  font-size: 14pt;
 }
 
 @media screen and (min-width: 479px) {
