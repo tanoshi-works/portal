@@ -3,7 +3,7 @@
     
     <g-image alt="logo" src="./img/logo_transparent.png" />
      
-    <center><h1>たのしいWorks Potal</h1></center>
+    <center><h1>Potal</h1></center>
 
     <p>
     <center>
