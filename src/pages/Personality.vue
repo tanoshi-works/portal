@@ -1,23 +1,25 @@
 <template>
   <Layout>
     <h1>Personality</h1>
-    <div class="container">
-      <div class="card">
+    <div class="container" v-for="{ node } in $page.allPersonality.edges" :key="node._id">
+      <div class="personality-card">
         <div class="card-left">
-          <img src="./img/icon-kameneko.jpg" alt="icon">
+          <g-image :src="node.image" />
         </div>
         <div class="card-right">
-          <h2>NAME</h2>
-          <p>profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. profile text. </p>
+          <h2 v-html="node.name" />
+          <p v-html="node.content"/>
         </div>
       </div>
       <div class="social-link">
         <ul>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">GitHub</a></li>
+          <li v-for="social in node.social" :key="social.title">
+            <g-link :href="social.url" target="_blank" exact>
+              <span v-html="social.title" />
+            </g-link>
+          </li>
         </ul>
       </div>
-
     </div>
   </Layout>
 </template>
@@ -30,13 +32,33 @@ export default {
 }
 </script>
 
+<page-query>
+  query personality ($page: Int) {
+    allPersonality (page: $page) {
+      edges {
+        node {
+          _id
+          name
+          image
+          content
+          social {
+            title
+            url
+          }
+        }
+      }
+    }
+  }
+</page-query>
+
+
 <style scope>
 .container {
   padding: 5px;
   margin: 5px;
 }
 
-.card {
+.personality-card {
   max-width: 760px;
 }
 
@@ -44,12 +66,13 @@ export default {
   max-width: 200px;
   width: 100%;
   margin-right: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .card-left > img {
   display: block;
-  width: 200px;
+  width: 180px;
+  margin: 10px;
 }
 
 .card-right {
@@ -57,7 +80,8 @@ export default {
 }
 
 .social-link {
-  max-width: 760px;
+  max-width: 750px;
+  margin-left: 10px;
   width: 100%;
 }
 
@@ -80,7 +104,7 @@ export default {
 }
 
 @media screen and (min-width: 479px) {
-  .card {
+  .personality-card {
     display: flex;
   }
 }

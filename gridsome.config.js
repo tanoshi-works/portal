@@ -15,6 +15,13 @@ module.exports = {
         typeName: 'Episode',
         route: '/episode/:slug'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/pages/personalities/*.md',
+        typeName: 'Personality'
+      }
     }
   ]
 }
