@@ -7,3 +7,5 @@ social:
   - title: "GitHub"
     url: "https://GitHub.com/kmd2kmd"
 ---
+
+髪の毛ブリーチしてグレーに染めるのが趣味なエンジニア
