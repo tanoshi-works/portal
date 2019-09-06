@@ -3,7 +3,7 @@
     
     <g-image alt="logo" src="./img/logo_transparent.png" />
     <h1 class="center">Potal</h1>
-    <p>
+    <p class="center">
       最近気になるIT業界の話をするPodcast、たのしいWorksのポータルサイトです。<br>
       ご意見ご感想は、Twitterで「<a href="https://twitter.com/search?q=%23たのしいWorks" target="_blank" rel="noopener">#たのしいWorks</a>」をつけて、呟いてみてください。<br>
       Podcastを続けていく上での参考にさせていただきます。ぜひお待ちしています！<br>
@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 .home-links a {
   margin-right: 1rem;
 }
@@ -37,11 +37,7 @@ img{
   max-width: 100%;
 }
 
-h1 {
-  text-align: center;
-}
-
-p {
+.center {
   text-align: center;
 }
 
