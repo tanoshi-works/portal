@@ -2,7 +2,7 @@
   <Layout>
     
     <g-image alt="logo" src="./img/logo_transparent.png" />
-    <h1 class="center">Potal</h1>
+    <h1 class="center">Portal</h1>
     <p class="center">
       最近気になるIT業界の話をするPodcast、たのしいWorksのポータルサイトです。<br>
       ご意見ご感想は、Twitterで「<a href="https://twitter.com/search?q=%23たのしいWorks" target="_blank" rel="noopener">#たのしいWorks</a>」をつけて、呟いてみてください。<br>
