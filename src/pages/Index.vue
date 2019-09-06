@@ -33,6 +33,10 @@ export default {
   margin-right: 1rem;
 }
 
+h1 {
+  margin-top: 15px;
+}
+
 img{
   max-width: 100%;
 }
