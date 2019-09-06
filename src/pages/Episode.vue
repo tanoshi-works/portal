@@ -29,7 +29,7 @@ export default {
         node {
           _id
           title
-          date (format: "収録日: YYYY/MM/DD")
+          date (format: "公開日: YYYY/MM/DD")
           slug
           path
         }
