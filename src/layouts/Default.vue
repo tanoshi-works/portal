@@ -2,9 +2,17 @@
   <div class="layout">
     <header class="header">
       <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/episode">Episode</g-link>
-        <g-link class="nav__link" to="/personality">Personality</g-link>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <g-link class="nav__link nav-link" to="/">Home</g-link>
+          </li>
+          <li class="nav-item">
+            <g-link class="nav__link nav-link" to="/episode">Episode</g-link>
+          </li>
+          <li class="nav-item">
+            <g-link class="nav__link nav-link" to="/personality">Personality</g-link>
+          </li>
+        </ul>
       </nav>
     </header>
     <slot/>
@@ -25,6 +33,10 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
+}
+
+.nav {
+  width: 100%;
 }
 
 .layout {

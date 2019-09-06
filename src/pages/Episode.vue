@@ -2,11 +2,11 @@
   <Layout>
     <h1>Episode</h1>
       <div class="card" v-for="{ node } in $page.allEpisode.edges" :key="node._id">
-        <h2>
+        <h4 class="card-title">
           <span v-html="node.slug" /> / 
           <span v-html="node.title"/>
-        </h2>
-        <div v-html="node.date" />
+        </h4>
+        <div class="card-subtitle mb-2 text-muted" v-html="node.date" />
         <router-link :to="node.path" class="link-card">
         </router-link>
         
@@ -29,7 +29,7 @@ export default {
         node {
           _id
           title
-          date (format: "収録日: YYYY/MM/DD")
+          date (format: "公開日: YYYY/MM/DD")
           slug
           path
         }
