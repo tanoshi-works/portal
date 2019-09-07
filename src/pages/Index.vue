@@ -4,8 +4,10 @@
     <g-image alt="logo" src="./img/logo_transparent.png" />
     <h1 class="center">Portal</h1>
     <p class="center">
-      最近気になるIT業界の話をするPodcast、たのしいWorksのポータルサイトです。<br>
-      ご意見ご感想は、Twitterで「<a href="https://twitter.com/search?q=%23たのしいWorks" target="_blank" rel="noopener">#たのしいWorks</a>」をつけて、呟いてみてください。<br>
+      インフラエンジニア出身の3人が最近気になるIT業界の話をするPodcast、<br>
+      たのしいWorksのポータルサイトです。<br>
+      <br>
+      ご意見・ご感想はTwitterで「<a href="https://twitter.com/search?q=%23たのしいWorks" target="_blank" rel="noopener">#たのしいWorks</a>」をつけて、呟いてみてください。<br>
       Podcastを続けていく上での参考にさせていただきます。ぜひお待ちしています！<br>
     </p>
     <div class="social-container">
