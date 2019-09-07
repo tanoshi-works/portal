@@ -5,10 +5,11 @@
     <h1 class="center">Portal</h1>
     <p class="center">
       インフラエンジニア出身の3人が最近気になるIT業界の話をするPodcast、<br>
-      たのしいWorksのポータルサイトです。<br>
-      <br>
+      たのしいWorksのポータルサイトです。
+    </p>
+    <p class="center">
       ご意見・ご感想はTwitterで「<a href="https://twitter.com/search?q=%23たのしいWorks" target="_blank" rel="noopener">#たのしいWorks</a>」をつけて、呟いてみてください。<br>
-      Podcastを続けていく上での参考にさせていただきます。ぜひお待ちしています！<br>
+      Podcastを続けていく上での参考にさせていただきます。ぜひお待ちしています！
     </p>
     <div class="social-container">
       <span class="social-twitter">
