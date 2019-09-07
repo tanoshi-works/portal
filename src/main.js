@@ -10,6 +10,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  head.htmlAttrs = { lang: 'ja' }
   head.script.push({
     src: 'https://platform.twitter.com/widgets.js',
     body: true
