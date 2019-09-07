@@ -1,14 +1,17 @@
-# Default starter for Gridsome
+# たのしいWorks Portal開発プロジェクト
 
-This is the project you get when you run `gridsome create new-project`.
+[ポータルサイトはここ](https://portal.tanoshii.work)
 
-### 1. Install Gridsome CLI tool if you don't have
+## ローカルで動かす方法
 
-`npm install --global @gridsome/cli`
+1. `git clone git@github.com:tanoshi-works/portal.git`
+2. `cd portal`
+3. `npm install`
+4. `npm run develop`
 
-### 2. Create a Gridsome project
+## 使ってるもの
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+- VueJS (JavaScriptフレームワーク)
+- Gridsome (静的サイトジェネレーター)
+- Firebase (mBaaS)
+- CircleCI (CI/CD SaaS)
