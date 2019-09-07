@@ -4,7 +4,7 @@
 
 ## ローカルで動かす方法
 
-0. `npm install --global @gridsome/cli` (Gridsome CLIがない場合)
+0. `npm install -D @gridsome/cli` (Gridsome CLIがない場合)
 1. `git clone git@github.com:tanoshi-works/portal.git`
 2. `cd portal`
 3. `npm install`
