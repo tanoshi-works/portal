@@ -8,5 +8,5 @@ social:
     url: "https://nagashi-ma-w.hatenablog.com"
 ---
 
-TRPGにお熱な無資格ITインフラえんじにゃー
+TRPGにお熱な無資格ITインフラえんじにゃー  
 腰痛持ちなのでラックマウントが天敵
