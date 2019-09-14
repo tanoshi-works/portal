@@ -12,6 +12,9 @@
           <li class="nav-item">
             <g-link class="nav__link nav-link" to="/personality">Personality</g-link>
           </li>
+          <li class="nav-item">
+            <a class="nav__link nav-link"  href="https://docs.google.com/forms/d/e/1FAIpQLSeEzHEyG3deYC0ZdyWHaKT3w9n_AdqytCEn7jYlrxTbEQJLbg/viewform?embedded=true">Contacts</a>
+          </li>
         </ul>
       </nav>
     </header>
