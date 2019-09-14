@@ -33,7 +33,7 @@ links:
 title: たのしいWorks
 date: 2018-10-27
 slug: ep01
-player: <iframe src="https://anchor.fm/tanoshii-works/embed/episodes/ep01-Works-e2furo" height="120px" width="100%" frameborder="0" scrolling="no"></iframe>
+player: https://anchor.fm/tanoshii-works/embed/episodes/ep01-Works-e2furo" height="120px" width="100%" frameborder="0" scrolling="no
 links:
   - title: "google"
     url: "https://google.com"
