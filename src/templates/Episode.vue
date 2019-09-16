@@ -9,7 +9,10 @@
     <span class="social-twitter">
       <a href="https://twitter.com/intent/tweet?button_hashtag=たのしいWorks&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #たのしいWorks</a>
     </span>
-    <div class="player" v-html="$page.episode.player" />
+    <div class="player">
+      <iframe :src="$page.episode.player" height="130px" width="100%" frameborder="0" scrolling="no"></iframe>
+    </div>
+
     <h2>ネタ帳</h2>
     <ul v-for="link in $page.episode.links" :key="link.title">
       <li>
