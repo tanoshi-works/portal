@@ -22,6 +22,12 @@ module.exports = {
         path: 'src/pages/personalities/*.md',
         typeName: 'Personality'
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-148440897-1'
+      }
     }
   ]
 }
