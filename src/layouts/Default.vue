@@ -22,6 +22,11 @@
       </nav>
     </header>
     <slot/>
+    <footer>
+      <div class="ga">
+        本サイトでは、<a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener noreferrer">Google Analytics</a>を利用しています。
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -62,5 +67,15 @@ body {
 
 .nav__link {
   margin-left: 20px;
+}
+
+footer {
+  color: grey;
+  font-size: 10pt;
+  padding: 10px;
+}
+
+footer > .ga{
+  text-align: center;
 }
 </style>
