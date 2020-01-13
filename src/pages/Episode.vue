@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1>Episode</h1>
-      <div class="card" v-for="{ node } in $page.allEpisode.edges" :key="node._id">
+      <div class="card" v-for="{ node } in $page.allEpisode.edges" :key="node.id">
         <h4 class="card-title">
           <span v-html="node.slug" /> / 
           <span v-html="node.title"/>
@@ -27,7 +27,7 @@ export default {
     allEpisode (page: $page) {
       edges {
         node {
-          _id
+          id
           title
           date (format: "公開日: YYYY/MM/DD")
           slug
@@ -38,7 +38,7 @@ export default {
   }
 </page-query>
 
-<style scope>
+<style scoped>
 .card {
   position: relative;
   margin-bottom: 15px;
