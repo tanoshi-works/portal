@@ -20,8 +20,8 @@ jobs:
     - name: save cache
       uses: actions/cache@v1
       with:
-      path: node_modules
-      key: v1-dependencies-{{ checksum "./package.json" }}
+        path: node_modules
+        key: v1-dependencies-{{ checksum "./package.json" }}
       restore-keys: |
         v1-dependencies-{{ checksum "./package.json" }}
     - name: npm install
