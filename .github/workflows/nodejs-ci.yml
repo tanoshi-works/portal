@@ -22,8 +22,8 @@ jobs:
       with:
         path: node_modules
         key: v1-dependencies-{{ checksum "./package.json" }}
-      restore-keys: |
-        v1-dependencies-{{ checksum "./package.json" }}
+        restore-keys: |
+          v1-dependencies-{{ checksum "./package.json" }}
     - name: npm install
       run: |
         npm ci
