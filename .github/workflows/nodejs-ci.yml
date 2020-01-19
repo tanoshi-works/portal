@@ -13,16 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Slack Notification
-      if: always()
-      uses: rtCamp/action-slack-notify@master
-      env:
-        SLACK_CHANNEL: notification-github 
-        SLACK_ICON: https://github.com/rtCamp.png?size=48
-        SLACK_MESSAGE: 'GitHub Actoins Start :rocket:'
-        SLACK_TITLE: GitHub Actoins Start
-        SLACK_USERNAME: rtCamp
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -41,3 +31,11 @@ jobs:
         npm run build
       env:
         CI: true
+    - name: Slack Notification
+      if: always()
+      uses: homoluctus/slatify@master
+      with:
+        type: ${{ job.status }}
+        job_name: "*Node CI*"
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
