@@ -65,6 +65,6 @@ jobs:
       uses: homoluctus/slatify@master
       with:
         type: ${{ job.status }}
-        job_name: "*Node CI*"
+        job_name: "*Firebase Deploy*"
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
