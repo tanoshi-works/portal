@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1>Personality</h1>
-    <div class="container" v-for="{ node } in $page.allPersonality.edges" :key="node._id">
+    <div class="container" v-for="{ node } in $page.allPersonality.edges" :key="node.id">
       <div class="personality-card">
         <div class="card-left">
           <g-image :src="node.image" />
@@ -37,7 +37,7 @@ export default {
     allPersonality (page: $page) {
       edges {
         node {
-          _id
+          id
           name
           image
           content
@@ -52,7 +52,7 @@ export default {
 </page-query>
 
 
-<style scope>
+<style scoped>
 .container {
   padding: 5px;
   margin: 5px;
