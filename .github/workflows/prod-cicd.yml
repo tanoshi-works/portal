@@ -1,0 +1,70 @@
+name: CI&CD to Firebase
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [10.15]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: save cache
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: npm ci
+      run: |
+        npm ci
+    - name: npm audit
+      run: |
+        npm audit
+    - name: npm test
+      run: |
+        npm test
+    - name: npm build
+      run: |
+        npm run build
+    - name: Archive Production Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: dist
+  deploy:
+    name: Deploy
+    needs: build
+    strategy:
+      matrix:
+        node-version: [10.15]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+    - name: Download Artifact
+      uses: actions/download-artifact@v1
+      with:
+        name: dist
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@v1
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    - name: Slack Notification
+      if: always()
+      uses: homoluctus/slatify@v2.1.0
+      with:
+        type: ${{ job.status }}
+        job_name: "*Test and Firebase Deploy*"
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

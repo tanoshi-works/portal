@@ -1,0 +1,43 @@
+name: Test at the time of Pull-Request
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.15]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: save cache
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: npm ci
+      run: |
+        npm ci
+    - name: npm audit
+      run: |
+        npm audit
+    - name: npm test
+      run: |
+        npm test
+    - name: npm build
+      run: |
+        npm run build
+    - name: Slack Notification
+      if: always()
+      uses: homoluctus/slatify@v2.1.0
+      with:
+        type: ${{ job.status }}
+        job_name: "*Test at the time of Pull-Request*"
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
