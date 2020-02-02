@@ -62,7 +62,7 @@ jobs:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     - name: Slack Notification
       if: always()
-      uses: homoluctus/slatify@v2
+      uses: homoluctus/slatify@v2.1.0
       with:
         type: ${{ job.status }}
         job_name: "*Test and Firebase Deploy*"

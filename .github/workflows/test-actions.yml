@@ -35,7 +35,7 @@ jobs:
         npm run build
     - name: Slack Notification
       if: always()
-      uses: homoluctus/slatify@v2
+      uses: homoluctus/slatify@v2.1.0
       with:
         type: ${{ job.status }}
         job_name: "*Test at the time of Pull-Request*"
