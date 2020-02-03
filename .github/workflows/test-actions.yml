@@ -10,11 +10,6 @@ jobs:
         node-version: [10.15]
     steps:
     - uses: actions/checkout@v2
-    - name: yarn audit
-      uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: audit
-    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
