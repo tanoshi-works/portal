@@ -22,7 +22,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
     - name: npm ci
-      uses: actions/setup-node@v1
       run: |
         npm ci
     - name: npm audit
