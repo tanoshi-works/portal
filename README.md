@@ -1,4 +1,4 @@
-# たのしいWorks Portal開発プロジェクト
+# たのしいWorks Portal開発
 
 [ポータルサイトはここ](https://portal.tanoshii.work)
 
@@ -13,5 +13,5 @@
 
 - VueJS (JavaScriptフレームワーク)
 - Gridsome (静的サイトジェネレーター)
-- Firebase (mBaaS)
-- CircleCI (CI/CD SaaS)
+- Firebase Hosting (mBaaS)
+- GitHub Actions (CI/CD)
