@@ -26,9 +26,6 @@ jobs:
     - name: npm ci
       run: |
         npm ci
-    - name: npm audit
-      run: |
-        npm audit
     - name: npm test
       run: |
         npm test
