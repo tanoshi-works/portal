@@ -28,9 +28,11 @@ jobs:
       run: |
         npm audit
     - name: npm test
+      if: always()
       run: |
         npm test
     - name: npm build
+      if: always()
       run: |
         npm run build
     - name: Slack Notification
